@@ -1,4 +1,5 @@
-body{ background-color: aqua;}
+body{ background-color: aqua;
+      width: clamp(1280px, 100%, 3840px);}
 
 nav{
     width: 100%;
