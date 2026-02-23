@@ -1,11 +1,15 @@
 @media (min-width: 360px) and (max-width: 599px) {
     body {
         background-color: coral;
+        width: 90%;              
+        height: 50vh; 
     }
 }
 
 @media (min-width: 600px) and (max-width: 1279px) {
     body {
         background-color: lightblue;
+        width: 80%;
+        height: 70vh;
     }
 }
