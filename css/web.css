@@ -1,13 +1,11 @@
 body{ background-color: aqua;
-      width: clamp(1280px, 100%, 3840px);}
+      width: 100%;
+      overflow-x: hidden;}
 
 nav{
     width: 100%;
     padding: 1rem 5%;
     background-color: gray;
-    backdrop-filter: blur(15px);
-    margin-bottom: 2rem;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,4 +32,56 @@ nav{
 .btn{
     padding: 0.5rem 1.5rem;
     cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    background-color: gray;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.dropdown-btn:hover {
+    background-color: #555;
+}
+
+.dropdown-menu {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    background-color: #333;
+    width: 250px;
+    box-shadow: -8px 8px 16px rgba(0,0,0,0.3);
+    z-index: 1999;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.5s ease-in-out;
+    border-radius: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dropdown-menu a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+    border-bottom: 1px solid #555;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555;
+}
+
+.dropdown-menu.show {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
 }

@@ -4,6 +4,13 @@
         width: 90%;              
         height: 50vh; 
     }
+    nav {
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
 }
 
 @media (min-width: 600px) and (max-width: 1279px) {
@@ -11,5 +18,12 @@
         background-color: lightblue;
         width: 80%;
         height: 70vh;
+    }
+    nav {
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
     }
 }
