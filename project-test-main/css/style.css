@@ -7,3 +7,38 @@ img{
 #rolunk p{text-align: justify;}
 
 #dolgozok p{text-align: justify;}
+
+.dolgozo-card {
+            background-color: #ffffffac;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.529);
+        }
+        .dolgozo-kep {
+            width: 100%;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .dolgozo-text {
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+        }
+        @media(min-width: 768px) {
+            .dolgozo-row {
+                display: flex;
+                align-items: center;
+            }
+            .dolgozo-row:nth-child(even) .dolgozo-kep {
+                order: 2;
+            }
+            .dolgozo-row:nth-child(even) .dolgozo-text {
+                order: 1;
+                padding-right: 20px;
+            }
+            .dolgozo-row:nth-child(odd) .dolgozo-text {
+                padding-left: 20px;
+            }
+        }
