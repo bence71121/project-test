@@ -1,0 +1,33 @@
+.allat-kartya {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.7); /* 30% átlátszó */
+    padding: 20px;
+    margin: 20px 0;
+
+    border-radius: 10px;
+
+    width: 100%;          /* teljes szélesség */
+    max-width: 100%;      /* biztosan ne legyen kisebb */
+
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2); /* jobb + alsó árnyék */
+}
+
+/* kép bal oldalon */
+.allat-kartya img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* szöveg jobb oldalon */
+.allat-info {
+    flex: 1;
+}
+
+.tart {
+    width: 100%;
+    padding: 0 20px; /* kis oldalsó margó */
+}

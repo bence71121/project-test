@@ -1,0 +1,25 @@
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    padding: 20px;
+}
+
+/* felső és alsó szöveg */
+.info-top, .info-bottom {
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+/* térkép középen */
+.info-map img {
+    height: 884px; ;
+    width: 1250px;
+    max-width: 1250px;
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
