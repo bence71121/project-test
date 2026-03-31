@@ -1,0 +1,96 @@
+/* ===============================
+   Általános stílusok
+   =============================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===============================
+   Dolgozó szekció
+   =============================== */
+#dolgozok {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#dolgozok h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* ===============================
+   Dolgozói kártyák elrendezése
+   =============================== */
+.dolgozo-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* távolság a kártyák között */
+}
+
+/* Egy dolgozó kártyája */
+.dolgozo-card {
+    width: 150px;                  /* fix kártya szélesség */
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.dolgozo-card:hover {
+    transform: translateY(-10px);
+}
+
+/* ===============================
+   Dolgozó kép
+   =============================== */
+.dolgozo-card .dolgozo-kep {
+    width: auto;           /* arányos szélesség */
+    max-width: 120px;      /* soha ne legyen nagyobb */
+    height: auto;          /* arányos magasság */
+    border-radius: 50%;    /* kerek kép */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* ===============================
+   Név és pozíció
+   =============================== */
+.dolgozo-card .nev {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.dolgozo-card .pozicio {
+    color: #555;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* ===============================
+   Reszponzív: kisebb képernyőn
+   =============================== */
+@media (max-width: 800px) {
+    .dolgozo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dolgozo-card {
+        width: 60%;  /* kártya szélessége mobilon */
+    }
+
+    .dolgozo-card .dolgozo-kep {
+        width: auto;
+        max-width: 120px;
+        height: auto;
+    }
+}
