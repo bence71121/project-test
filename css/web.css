@@ -2,23 +2,162 @@ body{ background-color: aqua;
       width: 100%;
       overflow-x: hidden;}
 
+/* INDEX OLDAL HÁTTÉR */
+body.index-body {
+    background-image: url(../image/hatter.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+/* FŐ TARTALOM BLOKK */
+.index-tartalom{
+    padding: 2rem 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ÜDVÖZLŐ SZAKASZ */
+.welcome-section h1 {
+    color: white;
+    text-align: center;
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin: 0 auto;
+    max-width: 900px;
+    text-shadow: 0 10px 20px rgb(0, 0, 0);
+}
+
+/* INFORMÁCIÓ KÁRTYÁK */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-card {
+    min-height: 220px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    padding: 1.5rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.info-card.today-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.card-label {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #0a3a43;
+}
+
+.card-date {
+    margin: 0;
+    font-size: 1.7rem;
+    color: #0a3a43;
+}
+
+.card-hours,
+.card-status {
+    margin: 0;
+    font-size: 1.15rem;
+    color: #0a3a43;
+}
+
+.card-status {
+    font-weight: 700;
+}
+
+.card-button {
+    display: inline-flex;
+    width: auto;
+    white-space: normal;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem auto 0;
+    padding: 0.8rem 1.2rem;
+    background-color: #0d6c79;
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-width: 180px;
+    transition: background-color 0.2s ease;
+}
+
+.card-button:hover {
+    background-color: #0a5660;
+}
+
+/* KÖZÖS OLDAL TARTALOMKERET */
+.fo_tart {
+    /* Ez a fő oldal tartalmát fogja körül, szükség esetén később bővíthető */
+}
+
+/* NAVBAR */
 nav{
     width: 100%;
-    padding: 1rem 5%;
-    background-color: gray;
+    padding: 1rem 15px;
+    background-color: rgba(81, 248, 81, 0.863);
+    box-shadow: black 0px 4px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    border-radius: 0px 0px 20px 20px;
 }
 
+.nav-links{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* LOGÓ STÍLUS */
 .logo_kep{
     width: 50px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 0;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* NAVLINKEK */
 .nav-links{
     list-style: none;
     display: flex;
     gap: 2rem;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .nav-links li a{
@@ -29,6 +168,7 @@ nav{
     color: white;
 }
 
+/* DÖNTÖTT MENÜ (beállítás ikon) */
 .btn{
     padding: 0.5rem 1.5rem;
     cursor: pointer;
@@ -36,27 +176,35 @@ nav{
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: none;
 }
 
+/* DÖNTÖTT GOMB */
 .dropdown-btn {
     padding: 0.5rem 1.5rem;
     cursor: pointer;
-    background-color: gray;
+    background-color: transparent;
     border: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dropdown-btn:hover {
-    background-color: #555;
+    background-color: rgba(81, 255, 0, 0.541);
+    border-radius: 50%;
 }
 
+/* LEGÖRDÜLŐ MENÜ */
 .dropdown-menu {
     position: fixed;
     right: 0;
     top: 60px;
-    background-color: #333;
+    background-color: rgb(255, 255, 255);
     width: 250px;
     box-shadow: -8px 8px 16px rgba(0,0,0,0.3);
     z-index: 1999;
@@ -85,3 +233,4 @@ nav{
     opacity: 1;
     pointer-events: auto;
 }
+

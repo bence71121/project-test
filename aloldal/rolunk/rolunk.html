@@ -17,21 +17,36 @@
 <body>
 
 <header>
+    <!-- HEADER: navigáció és logo -->
     <nav>
+        <!-- LOGÓ ÉS OLDALNÉV -->
         <div class="logo">
             <img src="../../image/vorospanda.png" alt="Rábapatyi Állatkert logó" class="logo_kep">
+            <span class="logo-text">Rábapaty Zoo</span>
         </div>
+        <!-- NAVLINKEK -->
         <ul class="nav-links">
             <li><a href="../../index.html">Home</a></li>
             <li><a href="#dolgozok">Rólunk</a></li>
-            <li><a href="../informaciok/index.html">Információ</a></li>
-            <li><a href="../allatok/index.html">Állatok</a></li>
+            <li><a href="../információk/indx.html">Információ</a></li>
+            <li><a href="../állatok/index.html">Állatok</a></li>
         </ul>
+        <!-- DÖNTÖTT MENÜ (beállítás ikon) -->
+        <div class="dropdown">
+            <button class="dropdown-btn"><i class="fa fa-gear"></i></button>
+            <div class="dropdown-menu">
+                <a href="#settings">Beállítások</a>
+                <a href="#about">Rólunk</a>
+                <a href="#help">Segítség</a>
+            </div>
+        </div>
     </nav>
 </header>
 
+<!-- FŐ TARTALOM: rólunk rész és dolgozók bemutatása -->
 <main>
 <section id="rolunk" class="container my-5">
+    <!-- RÓLUNK SZAKASZ -->
     <h1>Rólunk – A Rábapatyi Állatkert története</h1>
     <p>A Rábapatyi Állatkert egy kisebb, de rendkívül hangulatos állatkert Magyarországon, amely a látogatók számára barátságos, családias élményt nyújt. A zöldövezeti elhelyezkedés és az árnyékos sétányok lehetővé teszik, hogy a látogatók nyugodt környezetben fedezhessék fel az állatokat. A kert különböző részekre oszlik, mint például az afrikai állatok részleg, a dzsungel témájú rész, valamint a népszerű simogató. </p>
     <p>A simogatóban a kisebb gyerekek és felnőttek egyaránt közelről ismerkedhetnek meg a kecskékkel, nyuszikkal és bárányokkal, miközben a látogatók számára az állatokról szóló információs táblák is megtalálhatók, amelyek tanulságos és érthető módon mutatják be az egyes fajokat. Az állatkert nagy hangsúlyt fektet a természetvédelemre és a fenntarthatóságra, szelektív hulladékgyűjtőkkel és környezettudatos programokkal ösztönözve a látogatókat is a környezet védelmére.</p>
@@ -44,6 +59,7 @@
     </ul>
 </section>
 
+<!-- DOLGOZÓINK SZAKASZ -->
 <section id="dolgozok" class="container my-5">
     <h2>Dolgozóink</h2>
 
@@ -134,9 +150,12 @@
 </section>
 </main>
 
+<!-- LÁBLÉC -->
 <footer class="text-center py-4">
     &copy; 2026 Rábapatyi Állatkert
 </footer>
 
+<!-- SCRIPTEK -->
+   <script src="../../js/dropdown.js"></script>
 </body>
 </html>

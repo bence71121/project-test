@@ -11,16 +11,20 @@
     <link rel="icon" type="image/x-icon" href="image/favicon-32x32.png">
     <title>Állatkert home</title>
 </head>
-<body>
+<body class="index-body">
+    <!-- HEADER: navigáció és logo -->
     <header>
         <nav>
-            <div class="logo"><img src="image/logo.png" alt="logo" class="logo_kep"></div>
+            <!-- LOGÓ ÉS OLDALNÉV -->
+            <div class="logo"><img src="image/vorospanda.png" alt="Rábapatyi Állatkert logó" class="logo_kep"><span class="logo-text">Rábapaty Zoo</span></div>
+            <!-- NAVLINKEK -->
             <ul class="nav-links">
              <li><a href="#home">Home</a></li>
              <li><a href="aloldal/rolunk/rolunk.html">Rólunk</a></li>
              <li><a href="aloldal/információk/indx.html">Információ</a></li>
              <li><a href="aloldal/állatok/index.html">Állatok</a></li>
             </ul>
+            <!-- BEEJELÖLÉS: beállítás ikon és legördülő menü -->
             <div class="dropdown">
                 <button class="dropdown-btn"><i class="fa fa-gear"></i></button>
                 <div class="dropdown-menu">
@@ -32,18 +36,27 @@
             
         </nav>
     </header>
-    <div class="fo_tart">
-     <section id="test">
-        <div class="tart"></div>
-     </section>
-     <section id="test">
-        <div class="tart"></div>
-     </section>
-     <section id="test">
-        <div class="tart"></div>
-     </section>
+    <!-- FŐ TARTALOM: üdvözlő szakasz és infókártyák -->
+    <div class="fo_tart index-tartalom">
+        <section class="welcome-section">
+            <h1>Üdvözlünk a Rábapatyi Állatkert oldalán</h1>
+        </section>
+        <section class="info-cards">
+            <div class="info-card today-card">
+                <span class="card-label">MAI NYITVATARTÁS</span>
+                <h3 class="card-date">--</h3>
+                <p class="card-hours">--</p>
+                <p class="card-status">--</p>
+                <a href="aloldal/információk/indx.html" class="card-button">Teljes nyitvatartás</a>
+            </div>
+            <div class="info-card"></div>
+            <div class="info-card"></div>
+            <div class="info-card"></div>
+        </section>
     </div>
+    <!-- LÁBLÉC -->
    <footer></footer>
+   <!-- SCRIPTEK -->
    <script src="js/dropdown.js"></script>
 </body>
 </html>
