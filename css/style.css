@@ -6,7 +6,42 @@ img{
 #rolunk{padding: 20px;}
 #rolunk p{text-align: justify;}
 
-#dolgozok p{text-align: justify;}
+#dolgozok p {
+    text-align: justify;
+}
+
+#dolgozok .col-md-4 p {
+    text-align: center !important;
+}
+
+.dolgozo-card .dolgozo-text p {
+    width: 100%;
+    text-align: justify;
+}
+
+.dolgozo-card .nev,
+.dolgozo-card .pozicio {
+    text-align: center !important;
+    width: 100%;
+    margin: 0;
+}
+
+.dolgozo-card > .col-md-4 {
+    display: block !important;
+    text-align: center !important;
+}
+
+.dolgozo-card > .col-md-4 .dolgozo-kep {
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+.dolgozo-card > .col-md-4 .nev,
+.dolgozo-card > .col-md-4 .pozicio {
+    display: block !important;
+    width: 100% !important;
+    margin: 0.5rem auto 0 auto !important;
+}
 
 .dolgozo-card {
             background-color: #ffffffac;
@@ -17,9 +52,12 @@ img{
             box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.529);
         }
         .dolgozo-kep {
-            width: 100%;
+            width: 100% !important;
+            height: 280px;
+            object-fit: cover;
             border-radius: 10px;
             padding: 10px;
+            display: block;
         }
         .dolgozo-text {
             display: flex;
