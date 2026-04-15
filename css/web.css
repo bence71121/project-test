@@ -1,6 +1,11 @@
-body{ background-color: aqua;
+body{ background-color: white;
       width: 100%;
-      overflow-x: hidden;}
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+}
+
 
 /* INDEX OLDAL HÁTTÉR */
 body.index-body {
@@ -8,7 +13,6 @@ body.index-body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
 }
 
 /* FŐ TARTALOM BLOKK */
@@ -60,20 +64,20 @@ body.index-body {
     font-weight: 600;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #0a3a43;
+    color: black;
 }
 
 .card-date {
     margin: 0;
     font-size: 1.7rem;
-    color: #0a3a43;
+    color: black;
 }
 
 .card-hours,
 .card-status {
     margin: 0;
     font-size: 1.15rem;
-    color: #0a3a43;
+    color: black;
 }
 
 .card-status {
@@ -89,23 +93,42 @@ body.index-body {
     text-align: center;
     margin: 1rem auto 0;
     padding: 0.8rem 1.2rem;
-    background-color: #0d6c79;
+    background-color: rgba(81, 248, 81, 0.863);
     color: white;
     text-decoration: none;
     border-radius: 999px;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 1rem;
     min-width: 180px;
     transition: background-color 0.2s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .card-button:hover {
-    background-color: #0a5660;
+    background-color: rgba(0, 255, 0, 0.829);
+}
+
+/* TOVÁBBI SZÖVEG */
+.additional-text {
+    text-align: center;
+    margin: 2rem 0;
+    background-color: rgba(255, 255, 255, 0.945);
+    border-radius: 20px;
+}
+
+.additional-text p {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 2px;
+    border-radius: 12px;
+    text-align: justify;
+    margin: 5px;
 }
 
 /* KÖZÖS OLDAL TARTALOMKERET */
 .fo_tart {
-    /* Ez a fő oldal tartalmát fogja körül, szükség esetén később bővíthető */
+    flex: 1;
 }
 
 /* NAVBAR */
@@ -226,6 +249,22 @@ nav{
 
 .dropdown-menu a:hover {
     background-color: #555;
+}
+
+/* FOOTER */
+footer.footer-custom {
+    background-color: rgba(81, 248, 81, 0.863);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: black 0px -4px 20px;
+}
+
+footer.footer-custom p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
 .dropdown-menu.show {

@@ -8,6 +8,13 @@ img{
 
 #dolgozok p {
     text-align: justify;
+    width: 65%;
+}
+
+.text_right {
+    text-align: right !important;
+    width: 50%;
+    margin-left: 35%;
 }
 
 #dolgozok .col-md-4 p {
@@ -44,7 +51,7 @@ img{
 }
 
 .dolgozo-card {
-            background-color: #ffffffac;
+            background-color: rgba(81, 248, 81, 0.692);
             padding: 20px;
             margin: 20px 0;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
