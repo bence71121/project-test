@@ -255,16 +255,93 @@ nav{
 footer.footer-custom {
     background-color: rgba(81, 248, 81, 0.863);
     color: white;
-    text-align: center;
-    padding: 2rem;
+    padding: 1.5rem 1.5rem 1.25rem;
     margin-top: 2rem;
     box-shadow: black 0px -4px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1.5rem;
 }
 
-footer.footer-custom p {
+.footer-left {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-logo {
+    width: 130px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.footer-contact {
+    list-style: disc inside;
+    padding-left: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    min-width: 240px;
+    max-width: 420px;
+}
+
+.footer-contact li {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    list-style: none;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.9rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ddd;
+}
+
+footer.footer-custom p:last-child {
+    margin: 0 auto;
     font-weight: 500;
     font-size: 1rem;
+    text-align: center;
+    margin-right: 45rem;
+}
+
+@media (max-width: 800px) {
+    footer.footer-custom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-left {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-contact {
+        text-align: center;
+    }
 }
 
 .dropdown-menu.show {
