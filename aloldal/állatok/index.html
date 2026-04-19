@@ -29,9 +29,21 @@
             <div class="dropdown">
                 <button class="dropdown-btn"><i class="fa fa-gear"></i></button>
                 <div class="dropdown-menu">
-                    <a href="#settings">Beállítások</a>
-                    <a href="#about">Rólunk</a>
-                    <a href="#help">Segítség</a>
+                    <a href="../../index.html">Home</a>
+                    <a href="../rolunk/rolunk.html">Rólunk</a>
+                    <a href="../információk/indx.html">Információ</a>
+                    <a href="../állatok/index.html">Állatok</a>
+                </div>
+            </div>
+
+            <!-- KOSÁR IKON -->
+            <div class="cart-icon-wrapper">
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></button>
+                <div class="cart-popup">
+                    <h3>Vásárlási kosár</h3>
+                    <div id="cartItems"></div>
+                    <div class="cart-total">Összesen: <strong id="cartTotal">0 Ft</strong></div>
+                    <button class="checkout-btn">Vásárlás befejezése</button>
                 </div>
             </div>
             
@@ -47,82 +59,140 @@
     <div class="tart">
 
         <div class="allat-kartya">
-            <img src="allatok/vpanda2.jpg" alt="Vörös panda">
-            <h2>Vörös panda</h2>
-            <p><strong>Latin név:</strong> Ailurus fulgens</p>
-            <p><strong>Élőhely:</strong> Himalája erdős területei</p>
-            <p><strong>Táplálkozás:</strong> Mindenevő</p>
-            <p>
-                A vörös panda kis termetű, fára mászó állat, amely főként bambuszt, gyümölcsöket és rovarokat fogyaszt.
-            </p>
+            <div class="allat-media">
+                <img src="allatok/vpanda2.jpg" alt="Vörös panda">
+                <h2 class="allat-nev">Vörös panda</h2>
+            </div>
+            <ul class="allat-adatok">
+                <li><strong>Latin név:</strong> Ailurus fulgens</li>
+                <li><strong>Élőhely:</strong> Himalája erdős területei</li>
+                <li><strong>Táplálkozás:</strong> Mindenevő</li>
+            </ul>
+            <div class="allat-leiras">
+                <p>A vörös panda kis termetű, fára mászó állat, amely főként bambuszt, gyümölcsöket és rovarokat fogyaszt.</p>
+            </div>
         </div>
 
         <div class="allat-kartya">
-            <img src="allatok/panda.jpg" alt="Óriáspanda">
-            <h2>Óriáspanda</h2>
-            <p><strong>Latin név:</strong> Ailuropoda melanoleuca</p>
-            <p><strong>Élőhely:</strong> Kína hegyvidéki erdei</p>
-            <p><strong>Táplálkozás:</strong> Növényevő</p>
-            <p>
-                Az óriáspanda főként bambuszt eszik, és a világ egyik legismertebb és legkedveltebb állata.
-            </p>
+            <div class="allat-media">
+                <img src="allatok/panda.jpg" alt="Óriáspanda">
+                <h2 class="allat-nev">Óriáspanda</h2>
+            </div>
+            <ul class="allat-adatok">
+                <li><strong>Latin név:</strong> Ailuropoda melanoleuca</li>
+                <li><strong>Élőhely:</strong> Kína hegyvidéki erdei</li>
+                <li><strong>Táplálkozás:</strong> Növényevő</li>
+            </ul>
+            <div class="allat-leiras">
+                <p>Az óriáspanda főként bambuszt eszik, és a világ egyik legismertebb és legkedveltebb állata.</p>
+            </div>
         </div>
 
         <div class="allat-kartya">
-            <img src="allatok/axolotl.jpg" alt="Axolotl">
-            <h2>Axolotl</h2>
-            <p><strong>Latin név:</strong> Ambystoma mexicanum</p>
-            <p><strong>Élőhely:</strong> Mexikói tavak és csatornák</p>
-            <p><strong>Táplálkozás:</strong> Ragadozó</p>
-            <p>
-                Az axolotl különleges kétéltű, amely képes elvesztett testrészeit újranöveszteni.
-            </p>
+            <div class="allat-media">
+                <img src="allatok/axolotl.jpg" alt="Axolotl">
+                <h2 class="allat-nev">Axolotl</h2>
+            </div>
+            <ul class="allat-adatok">
+                <li><strong>Latin név:</strong> Ambystoma mexicanum</li>
+                <li><strong>Élőhely:</strong> Mexikói tavak és csatornák</li>
+                <li><strong>Táplálkozás:</strong> Ragadozó</li>
+            </ul>
+            <div class="allat-leiras">
+                <p>Az axolotl különleges kétéltű, amely képes elvesztett testrészeit újranöveszteni.</p>
+            </div>
         </div>
 
         <div class="allat-kartya">
-            <img src="allatok/feherfoka.jpg" alt="Fehér fóka">
-            <h2>Fehér fóka</h2>
-            <p><strong>Latin név:</strong> Pagophilus groenlandicus</p>
-            <p><strong>Élőhely:</strong> Északi-sarki területek</p>
-            <p><strong>Táplálkozás:</strong> Húsevő</p>
-            <p>
-                A fehér fóka vastag zsírréteggel rendelkezik, amely megvédi a hideg vizekben.
-            </p>
+            <div class="allat-media">
+                <img src="allatok/feherfoka.jpg" alt="Fehér fóka">
+                <h2 class="allat-nev">Fehér fóka</h2>
+            </div>
+            <ul class="allat-adatok">
+                <li><strong>Latin név:</strong> Pagophilus groenlandicus</li>
+                <li><strong>Élőhely:</strong> Északi-sarki területek</li>
+                <li><strong>Táplálkozás:</strong> Húsevő</li>
+            </ul>
+            <div class="allat-leiras">
+                <p>A fehér fóka vastag zsírréteggel rendelkezik, amely megvédi a hideg vizekben.</p>
+            </div>
         </div>
 
         <div class="allat-kartya">
-            <img src="allatok/mosomaci.jpg" alt="Mosómedve">
-            <h2>Mosómedve</h2>
-            <p><strong>Latin név:</strong> Procyon lotor</p>
-            <p><strong>Élőhely:</strong> Észak-Amerika</p>
-            <p><strong>Táplálkozás:</strong> Mindenevő</p>
-            <p>
-                A mosómedve intelligens állat, amely gyakran vízben "mossa" meg a táplálékát.
-            </p>
+            <div class="allat-media">
+                <img src="allatok/mosomaci.jpg" alt="Mosómedve">
+                <h2 class="allat-nev">Mosómedve</h2>
+            </div>
+            <ul class="allat-adatok">
+                <li><strong>Latin név:</strong> Procyon lotor</li>
+                <li><strong>Élőhely:</strong> Észak-Amerika</li>
+                <li><strong>Táplálkozás:</strong> Mindenevő</li>
+            </ul>
+            <div class="allat-leiras">
+                <p>A mosómedve intelligens állat, amely gyakran vízben "mossa" meg a táplálékát.</p>
+            </div>
         </div>
 
         <div class="allat-kartya">
-            <img src="allatok/teknos.jpg" alt="Teknős">
-            <h2>Teknős</h2>
-            <p><strong>Latin név:</strong> Testudines</p>
-            <p><strong>Élőhely:</strong> Világszerte</p>
-            <p><strong>Táplálkozás:</strong> Változó</p>
-            <p>
-                A teknősök kemény páncéllal rendelkeznek, amely megvédi őket a ragadozóktól.
-            </p>
+            <div class="allat-media">
+                <img src="allatok/teknos.jpg" alt="Teknős">
+                <h2 class="allat-nev">Teknős</h2>
+            </div>
+            <ul class="allat-adatok">
+                <li><strong>Latin név:</strong> Testudines</li>
+                <li><strong>Élőhely:</strong> Világszerte</li>
+                <li><strong>Táplálkozás:</strong> Változó</li>
+            </ul>
+            <div class="allat-leiras">
+                <p>A teknősök kemény páncéllal rendelkeznek, amely megvédi őket a ragadozóktól.</p>
+            </div>
         </div>
 
         <div class="allat-kartya">
-            <img src="allatok/gombhal.jpg" alt="Gömbhal">
-            <h2>Gömbhal</h2>
-            <p><strong>Latin név:</strong> Tetraodontidae</p>
-            <p><strong>Élőhely:</strong> Trópusi tengerek</p>
-            <p><strong>Táplálkozás:</strong> Ragadozó</p>
-            <p>
-                A gömbhal veszély esetén felfújja magát, és sok faja mérgező.
-            </p>
+            <div class="allat-media">
+                <img src="allatok/gombhal.jpg" alt="Gömbhal">
+                <h2 class="allat-nev">Gömbhal</h2>
+            </div>
+            <ul class="allat-adatok">
+                <li><strong>Latin név:</strong> Tetraodontidae</li>
+                <li><strong>Élőhely:</strong> Trópusi tengerek</li>
+                <li><strong>Táplálkozás:</strong> Ragadozó</li>
+            </ul>
+            <div class="allat-leiras">
+                <p>A gömbhal veszély esetén felfújja magát, és sok faja mérgező.</p>
+            </div>
         </div>
-        <div>
+
+        <div class="allat-kartya">
+            <div class="allat-media">
+                <img src="allatok/African_Bush_Elephant.jpg" alt="Afrikai elefánt">
+                <h2 class="allat-nev">Afrikai elefánt</h2>
+            </div>
+            <ul class="allat-adatok">
+                <li><strong>Latin név:</strong> Loxodonta africana</li>
+                <li><strong>Élőhely:</strong> Afrika szavannái és füves területei</li>
+                <li><strong>Táplálkozás:</strong> Növényevő</li>
+            </ul>
+            <div class="allat-leiras">
+                <p>Az afrikai elefánt a legnagyobb szárazföldi emlős, amely hatalmas füleiről és kiváló memóriájáról ismert.</p>
+            </div>
+        </div>
+
+        <div class="allat-kartya">
+            <div class="allat-media">
+                <img src="allatok/images.jpg" alt="Pingvin">
+                <h2 class="allat-nev">Pingvin</h2>
+            </div>
+            <ul class="allat-adatok">
+                <li><strong>Latin név:</strong> Spheniscidae</li>
+                <li><strong>Élőhely:</strong> Déli-sarki és déli féltekei partvidékek</li>
+                <li><strong>Táplálkozás:</strong> Húsevő</li>
+            </ul>
+            <div class="allat-leiras">
+                <p>A pingvinek remek úszók, szárnyaik uszonyszerűek, a víz alatt gyorsan és ügyesen vadásznak halakra.</p>
+            </div>
+        </div>
+        <div class="allatok-zaro">
             <h3>
                 És még sok másik állat vár rátok, esetleg még mások is a múltból
             </h3>

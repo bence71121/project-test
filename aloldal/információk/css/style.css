@@ -3,31 +3,436 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-
     width: 100%;
     padding: 20px;
 }
 
 /* felső és alsó szöveg */
 .info-top, .info-bottom {
-    max-width: 800px;
+    max-width: 1250px;
     margin: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-/* térkép középen */
+/* Térkép cím - bal oldalon */
+.map-title {
+    width: 100%;
+    text-align: left;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0 10px 0;
+}
+
+/* térkép felül, nagy, középen */
+.info-map {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
 .info-map img {
-    height: 884px; ;
-    width: 1250px;
+    height: auto;
+    width: 100%;
     max-width: 1250px;
     border-radius: 10px;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* AKKORDION STÍLUS - alul, bal oldalon */
+.accordion {
+    width: 100%;
+    max-width: 1250px;
+    margin: 30px 0 30px 0;
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-btn {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: rgba(81, 248, 81, 0.863);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.accordion-btn:hover {
+    background-color: rgba(60, 200, 60, 0.863);
+}
+
+.accordion-btn.active {
+    background-color: rgba(45, 180, 45, 0.863);
+}
+
+.accordion-btn i {
+    transition: transform 0.3s ease;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    flex-shrink: 0;
+}
+
+.accordion-btn.active i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    transition: max-height 0.4s ease;
+}
+
+.accordion-content.active {
+    max-height: 3000px;
+    overflow: visible;
+    padding: 20px;
 }
 
 /*Nyitva tartás*/
 .opening-hours , .contact-info , .ticket-prices {
     list-style-type: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 0;
     text-align: start;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Responsív */
+@media (max-width: 1024px) {
+    .accordion {
+        max-width: 100%;
+    }
+}
+
+/* NAPI PROGRAMOK */
+.daily-programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 10px 0;
+    align-items: start;
+}
+
+.day-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.day-header {
+    background-color: rgba(81, 248, 81, 0.863);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px 15px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+
+.day-event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.day-event:last-child {
+    border-bottom: none;
+}
+
+.event-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    color: rgba(45, 143, 45, 1);
+    width: 28px;
+    text-align: center;
+}
+
+.day-event div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.day-event strong {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.event-time {
+    font-size: 0.82rem;
+    color: #2d8f2d;
+    font-weight: 600;
+}
+
+.programs-note {
+    margin-top: 15px;
+    font-style: italic;
+    color: #777;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .daily-programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .daily-programs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* KOSÁR IKON NAVBAR-BAN */
+.cart-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+    color: white;
     font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    background-color: #2d8f2d;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.cart-popup {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 100;
+}
+
+.cart-popup.show {
+    display: block;
+}
+
+.cart-popup h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+#cartItems {
+    margin: 15px 0;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.cart-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.cart-item-remove {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.cart-total {
+    padding: 15px 0;
+    border-top: 2px solid #ddd;
+    font-weight: bold;
+    text-align: right;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(81, 248, 81, 0.863);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkout-btn:hover {
+    background-color: rgba(60, 200, 60, 0.863);
+}
+
+/* JEGYVÁSÁRLÁS SZEKCIÓ */
+.ticket-purchase-section {
+    width: 100%;
+    max-width: 1250px;
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.ticket-purchase-section h3 {
+    color: #333;
+    margin-top: 0;
+}
+
+.purchase-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.date-picker-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-picker-wrapper label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.visit-date {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#dayStatus {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#dayStatus.open {
+    background-color: rgba(81, 248, 81, 0.2);
+    color: green;
+}
+
+#dayStatus.closed {
+    background-color: rgba(200, 200, 200, 0.3);
+    color: gray;
+}
+
+.ticket-selector {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket-selector h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.ticket-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ticket-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.ticket-option label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.ticket-option input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.add-to-cart-btn {
+    padding: 12px 20px;
+    background-color: rgba(81, 248, 81, 0.863);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.add-to-cart-btn:hover {
+    background-color: rgba(60, 200, 60, 0.863);
+}
+
+@media (max-width: 768px) {
+    .purchase-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-popup {
+        min-width: 250px;
+    }
 }

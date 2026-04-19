@@ -1,35 +1,501 @@
 @media (min-width: 360px) and (max-width: 599px) {
+    html,
     body {
-        background-color: coral;
-        width: 90%;              
-        height: 50vh; 
+        width: 100%;
+        overflow-x: hidden;
     }
+
+    body {
+        font-size: 15px;
+    }
+
     nav {
-        width: 100vw;
-        position: fixed;
+        padding: 0.75rem 12px;
+        border-radius: 0 0 14px 14px;
+        position: sticky;
         top: 0;
-        left: 0;
-        z-index: 1000;
+        z-index: 2000;
+        justify-content: flex-start;
     }
+
+    .logo_kep {
+        width: 40px;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+    }
+
     .nav-links {
-        display: none;
+        display: none !important;
     }
+
     .dropdown {
-        display: inline-block;
+        display: inline-flex !important;
+        margin-left: auto;
+        margin-right: 6px;
+        align-items: center;
+    }
+
+    .cart-icon-wrapper {
+        display: inline-flex;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .dropdown-btn,
+    .cart-btn {
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(3px);
+    }
+
+    .dropdown-btn:hover,
+    .cart-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .dropdown-menu {
+        top: 64px;
+        right: 10px;
+        width: min(86vw, 300px);
+        border-radius: 12px;
+        background: linear-gradient(180deg, rgba(36, 121, 36, 0.97), rgba(23, 89, 23, 0.97));
+        border: 1px solid rgba(255, 255, 255, 0.22);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+    }
+
+    .dropdown-menu a {
+        color: #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        font-size: 0.95rem;
+        padding: 13px 16px;
+    }
+
+    .dropdown-menu a:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-menu a:hover {
+        background: rgba(255, 255, 255, 0.18);
+    }
+
+    .cart-btn {
+        font-size: 1.25rem;
+        padding: 8px;
+    }
+
+    .cart-popup {
+        right: 0;
+        min-width: 260px;
+        max-width: 92vw;
+        padding: 14px;
+    }
+
+    .index-tartalom {
+        padding: 1rem 12px;
+        gap: 1.2rem;
+    }
+
+    .welcome-section h1 {
+        font-size: clamp(1.55rem, 7vw, 2.1rem);
+        max-width: 95%;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .info-card {
+        min-height: unset;
+        padding: 1rem;
+        border-radius: 16px;
+    }
+
+    .card-date {
+        font-size: 1.35rem;
+    }
+
+    .card-hours,
+    .card-status {
+        font-size: 1rem;
+    }
+
+    .ticket-card-image {
+        width: 125px;
+    }
+
+    .card-button {
+        min-width: 160px;
+        font-size: 0.95rem;
+        padding: 0.7rem 1rem;
+    }
+
+    .additional-text {
+        margin: 1rem 0;
+        border-radius: 14px;
+        padding: 0.75rem;
+    }
+
+    .additional-text h1 {
+        font-size: 1.45rem;
+        margin-top: 0;
+    }
+
+    .additional-text p {
+        text-align: left;
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    .info-container {
+        padding: 12px;
+    }
+
+    .info-top,
+    .info-bottom {
+        margin: 12px 0;
+    }
+
+    .map-title {
+        text-align: left;
+        font-size: 1.35rem;
+    }
+
+    .info-map {
+        margin: 14px 0;
+    }
+
+    .info-map img {
+        border-radius: 8px;
+    }
+
+    .accordion {
+        margin: 14px 0;
+    }
+
+    .accordion-btn {
+        padding: 12px 14px;
+        font-size: 0.92rem;
+    }
+
+    .accordion-content.active {
+        padding: 12px;
+    }
+
+    .purchase-container {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+
+    .ticket-option label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .ticket-option input {
+        width: 100%;
+    }
+
+    .daily-programs-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
+
+    .day-header {
+        font-size: 0.95rem;
+    }
+
+    .day-event strong {
+        font-size: 0.86rem;
+    }
+
+    #allatok .tart {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+        padding: 0 12px;
+    }
+
+    .allat-kartya {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .allat-kartya img {
+        max-width: 160px;
+    }
+
+    .allat-nev {
+        font-size: 1.1rem;
+    }
+
+    .allat-adatok {
+        padding: 4px 0;
+        background: transparent;
+    }
+
+    .allat-leiras p {
+        font-size: 0.92rem;
+    }
+
+    #rolunk,
+    #dolgozok {
+        padding: 18px 12px;
+    }
+
+    #rolunk h1 {
+        font-size: 1.45rem;
+    }
+
+    #rolunk h2,
+    #dolgozok h2 {
+        font-size: 1.2rem;
+    }
+
+    .dolgozo-row {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .dolgozo-row > .col-md-4,
+    .dolgozo-row > .col-md-8 {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .dolgozo-row > .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dolgozo-text,
+    .text_right {
+        width: 100% !important;
+        margin-left: 0 !important;
+        text-align: left !important;
+    }
+
+    .dolgozo-kep {
+        width: min(100%, 220px) !important;
+        max-width: 220px !important;
+        height: auto !important;
+        max-height: none !important;
+        display: block;
+        margin: 0 auto;
+        border-radius: 18px;
+        object-fit: contain !important;
+        padding: 0 !important;
+    }
+
+    footer.footer-custom {
+        padding: 1rem 12px;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .footer-left {
+        width: 100%;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-contact {
+        min-width: 0;
+        width: 100%;
+        max-width: none;
+        text-align: center;
+    }
+
+    footer.footer-custom p:last-child {
+        margin: 0;
+        margin-right: 0 !important;
+        font-size: 0.92rem;
+    }
+
+    .social-icons a {
+        font-size: 1.35rem;
     }
 }
 
 @media (min-width: 600px) and (max-width: 1279px) {
+    html,
     body {
-        background-color: lightblue;
-        width: 80%;
-        height: 70vh;
+        width: 100%;
+        overflow-x: hidden;
     }
+
     nav {
-        width: 100vw;
-        position: fixed;
+        padding: 0.9rem 16px;
+        position: sticky;
         top: 0;
-        left: 0;
-        z-index: 1000;
+        z-index: 2000;
+    }
+
+    .logo_kep {
+        width: 44px;
+    }
+
+    .logo-text {
+        font-size: 1.05rem;
+    }
+
+    .nav-links {
+        display: flex !important;
+        position: static;
+        transform: none;
+        margin-left: auto;
+        margin-right: 16px;
+        gap: 1.1rem;
+    }
+
+    .nav-links li a {
+        font-size: 0.96rem;
+        white-space: nowrap;
+    }
+
+    .dropdown {
+        display: none !important;
+    }
+
+    .cart-popup {
+        right: 0;
+        min-width: 300px;
+        max-width: 70vw;
+    }
+
+    .index-tartalom {
+        padding: 1.5rem 20px;
+    }
+
+    .welcome-section h1 {
+        font-size: clamp(2rem, 4vw, 2.6rem);
+        max-width: 90%;
+    }
+
+    .info-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .info-card {
+        min-height: 230px;
+        padding: 1.2rem;
+    }
+
+    .card-date {
+        font-size: 1.5rem;
+    }
+
+    .card-hours,
+    .card-status {
+        font-size: 1.05rem;
+    }
+
+    .ticket-card-image {
+        width: 135px;
+    }
+
+    .card-button {
+        min-width: 170px;
+    }
+
+    .additional-text {
+        padding: 1rem;
+    }
+
+    .additional-text h1 {
+        font-size: 2rem;
+    }
+
+    .additional-text p {
+        font-size: 1.05rem;
+        line-height: 1.5;
+    }
+
+    .info-container {
+        padding: 16px;
+    }
+
+    .map-title {
+        font-size: 1.55rem;
+    }
+
+    .accordion-btn {
+        font-size: 0.96rem;
+    }
+
+    .daily-programs-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .purchase-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    #allatok .tart {
+        grid-template-columns: repeat(2, minmax(260px, 360px)) !important;
+        justify-content: center;
+        max-width: 960px;
+        margin: 0 auto;
+        gap: 14px;
+    }
+
+    .allat-kartya img {
+        max-width: 175px;
+    }
+
+    .allat-nev {
+        font-size: 1.15rem;
+    }
+
+    .allat-leiras p {
+        font-size: 0.93rem;
+    }
+
+    .dolgozo-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .dolgozo-kep {
+        width: clamp(160px, 24vw, 210px) !important;
+        max-width: 210px !important;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border-radius: 20px;
+        object-fit: cover;
+    }
+
+    footer.footer-custom {
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .footer-left {
+        align-items: center;
+    }
+
+    .footer-contact {
+        min-width: 0;
+        max-width: 520px;
+    }
+
+    footer.footer-custom p:last-child {
+        margin-right: 0 !important;
+        margin-left: 0;
     }
 }

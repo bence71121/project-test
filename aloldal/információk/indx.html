@@ -29,9 +29,21 @@
             <div class="dropdown">
                 <button class="dropdown-btn"><i class="fa fa-gear"></i></button>
                 <div class="dropdown-menu">
-                    <a href="#settings">Beállítások</a>
-                    <a href="#about">Rólunk</a>
-                    <a href="#help">Segítség</a>
+                    <a href="../../index.html">Home</a>
+                    <a href="../rolunk/rolunk.html">Rólunk</a>
+                    <a href="../információk/indx.html">Információ</a>
+                    <a href="../állatok/index.html">Állatok</a>
+                </div>
+            </div>
+
+            <!-- KOSÁR IKON -->
+            <div class="cart-icon-wrapper">
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></button>
+                <div class="cart-popup">
+                    <h3>Vásárlási kosár</h3>
+                    <div id="cartItems"></div>
+                    <div class="cart-total">Összesen: <strong id="cartTotal">0 Ft</strong></div>
+                    <button class="checkout-btn">Vásárlás befejezése</button>
                 </div>
             </div>
             
@@ -57,55 +69,154 @@
         <div class="info-top">
        
             <h2>Állatkerti információk</h2>  
-        <!-- Középen térkép -->
-         <div class="info-map">
+        
+        <!-- Térkép cím -->
+        <h2 class="map-title">Térkép:</h2>
+        
+        <!-- Térkép - nagy, középen -->
+        <div class="info-map">
             <img src="kepek/terkep2.jpeg" alt="Állatkert térképe">
-         </div>
-            <p>
-                <h3>
-                Nyitva tartásunk: 09:00-21:00 Keddtől vasárnapig
-                </h3>
-                <ul class="opening-hours">
-                    <li>Hétfőn zárva tartunk karbantartás miatt.</li>
-                    <li>kedd 9:00-21:00</li>
-                    <li>szerda 9:00-21:00</li>
-                    <li>csütörtök 9:00-21:00</li>
-                    <li>péntek 9:00-21:00</li>
-                    <li>szombat 9:00-21:00</li>
-                    <li>vasárnap 9:00-21:00</li>
-                </ul>
-                <ul class="ticket-prices">
-                    <li>Jegyárak:</li>
-                    <li>Felnőtt: 3000 Ft</li>
-                    <li>Gyermek (3-14 év): 1500 Ft</li>
-                    <li>Diák és nyugdíjas: 2000 Ft</li>
-                    <li>Családi jegy (2 felnőtt + 2 gyermek): 8000 Ft</li>
-                </ul>
-                <ul class="contact-info">
-                    <li>Címünk:</li>
-                    <li>9641 Rábapaty , 84-es út mellett</li>
-                    <li>Telefonszám:</li>
-                    <li>06 96 618 367</li>
-                    <li>E-mail címünk:</li>
-                    <li>Rábapatyzoo@gmail.com</li>
-                    <li>Ügyfélfogadás:</li>
-                    <li>munkanapokon 8:00-12:00-ig & 12:00-17:00-ig az irodában</li>
-                    <li>Mellékek:</li>
-                    <li>Jegypénztár: 20 348 1208</li>
-                    <li>Mentőközpont: 20 392 8914</li>
-                    <li>Pénzügy: 15</li>
-                    <li>Titkárság: 14</li>
-                    <li>Állatorvos: 12</li>
-                    <li>Zoopedagógia: 11</li>
-                    <li>Üzemeltetés: 10</li>
-                    <li>Természetvédelem: 19</li>
-                </ul>
-                </ul>
-            </p>
         </div>
 
-       
-    </div>
+        <!-- AKKORDION ELEMEK - alul, bal oldalon -->
+        <div class="accordion">
+            <!-- Nyitva tartás -->
+            <div class="accordion-item" id="nyitvatartasak">
+                <button class="accordion-btn">
+                    <span>Nyitva tartásunk: 09:00-21:00 Keddtől vasárnapig</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <ul class="opening-hours">
+                        <li>Hétfőn zárva tartunk karbantartás miatt.</li>
+                        <li>kedd 9:00-21:00</li>
+                        <li>szerda 9:00-21:00</li>
+                        <li>csütörtök 9:00-21:00</li>
+                        <li>péntek 9:00-21:00</li>
+                        <li>szombat 9:00-21:00</li>
+                        <li>vasárnap 9:00-21:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Napi programok -->
+            <div class="accordion-item" id="programok">
+                <button class="accordion-btn">
+                    <span>Napi programok</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <div class="daily-programs-grid">
+                        <div class="day-card">
+                            <div class="day-header">Kedd</div>
+                            <div class="day-event"><span class="event-icon"><i class="fas fa-fish"></i></span><div><strong>Fókáink etetése és bemutatója</strong><span class="event-time">11:00 &amp; 15:00</span></div></div>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-header">Szerda</div>
+                            <div class="day-event"><span class="event-icon"><i class="fas fa-feather"></i></span><div><strong>Papagájok tanítása és interaktív bemutató</strong><span class="event-time">10:30 &amp; 14:00</span></div></div>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-header">Csütörtök</div>
+                            <div class="day-event"><span class="event-icon"><i class="fas fa-paw"></i></span><div><strong>Elefántsimogató és etetés</strong><span class="event-time">11:00 &amp; 16:00</span></div></div>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-header">Péntek</div>
+                            <div class="day-event"><span class="event-icon"><i class="fas fa-skull-crossbones"></i></span><div><strong>Ragadozók etetési bemutatója</strong><span class="event-time">12:00 &amp; 17:00</span></div></div>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-header">Szombat</div>
+                            <div class="day-event"><span class="event-icon"><i class="fas fa-snowflake"></i></span><div><strong>Pingvin-séta és etetés</strong><span class="event-time">10:00 &amp; 14:30</span></div></div>
+                            <div class="day-event"><span class="event-icon"><i class="fas fa-palette"></i></span><div><strong>Gyerekfoglalkozás</strong><span class="event-time">13:00</span></div></div>
+                        </div>
+                        <div class="day-card">
+                            <div class="day-header">Vasárnap</div>
+                            <div class="day-event"><span class="event-icon"><i class="fas fa-water"></i></span><div><strong>Krokodilok etetése</strong><span class="event-time">11:30</span></div></div>
+                            <div class="day-event"><span class="event-icon"><i class="fas fa-syringe"></i></span><div><strong>Hüllőbemutató</strong><span class="event-time">15:00</span></div></div>
+                        </div>
+                    </div>
+                    <p class="programs-note">* A programok időpontjai változhatnak. Érdeklődjön a jegypénztárnál!</p>
+                </div>
+            </div>
+
+            <!-- Jegyárak -->
+            <div class="accordion-item" id="jegyarak">
+                <button class="accordion-btn">
+                    <span>Jegyárak és vásárlás</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <ul class="ticket-prices">
+                        <li>Felnőtt: 3000 Ft</li>
+                        <li>Gyermek (3-14 év): 1500 Ft</li>
+                        <li>Diák és nyugdíjas: 2000 Ft</li>
+                        <li>Családi jegy (2 felnőtt + 2 gyermek): 8000 Ft</li>
+                    </ul>
+                    <hr>
+                    <h3 style="margin-top: 15px;">Jegyvásárlás</h3>
+                    <div class="purchase-container">
+                        <!-- Naptár -->
+                        <div class="date-picker-wrapper">
+                            <label for="visitDate">Látogatás dátuma:</label>
+                            <input type="date" id="visitDate" class="visit-date">
+                            <p id="dayStatus"></p>
+                        </div>
+                        <!-- Jegyválasztás -->
+                        <div class="ticket-selector">
+                            <h4>Jegyek kiválasztása:</h4>
+                            <div class="ticket-options">
+                                <div class="ticket-option">
+                                    <label>
+                                        <span>Felnőtt - 3000 Ft</span>
+                                        <input type="number" class="ticket-qty" data-price="3000" data-type="felnőtt" min="0" value="0">
+                                    </label>
+                                </div>
+                                <div class="ticket-option">
+                                    <label>
+                                        <span>Gyermek (3-14 év) - 1500 Ft</span>
+                                        <input type="number" class="ticket-qty" data-price="1500" data-type="gyermek" min="0" value="0">
+                                    </label>
+                                </div>
+                                <div class="ticket-option">
+                                    <label>
+                                        <span>Diák/Nyugdíjas - 2000 Ft</span>
+                                        <input type="number" class="ticket-qty" data-price="2000" data-type="diak" min="0" value="0">
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="add-to-cart-btn">Kosárba</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elérhetőség -->
+            <div class="accordion-item" id="elerhetoseg">
+                <button class="accordion-btn">
+                    <span>Elérhetőség és információk</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <ul class="contact-info">
+                        <li><strong>Címünk:</strong> 9641 Rábapaty, 84-es út mellett</li>
+                        <li><strong>Telefonszám:</strong> 06 96 618 367</li>
+                        <li><strong>E-mail:</strong> Rábapatyzoo@gmail.com</li>
+                        <li><strong>Ügyfélfogadás:</strong> munkanapokon 8:00-12:00 & 13:00-17:00 az irodában</li>
+                        <li style="margin-top: 15px;"><strong>Mellékek:</strong></li>
+                        <li>Jegypénztár: 20 348 1208</li>
+                        <li>Mentőközpont: 20 392 8914</li>
+                        <li>Pénzügy: 15</li>
+                        <li>Titkárság: 14</li>
+                        <li>Állatorvos: 12</li>
+                        <li>Zoopedagógia: 11</li>
+                        <li>Üzemeltetés: 10</li>
+                        <li>Természetvédelem: 19</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        </div>
 </section>
     </div>
    <!-- LÁBLÉC -->

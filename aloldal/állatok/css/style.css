@@ -1,33 +1,157 @@
 .allat-kartya {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
 
-    background: rgba(255, 255, 255, 0.7); /* 30% átlátszó */
-    padding: 20px;
+    background: rgba(255, 255, 255, 0.88);
+    padding: 16px;
     margin: 20px 0;
 
-    border-radius: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
 
-    width: 100%;          /* teljes szélesség */
-    max-width: 100%;      /* biztosan ne legyen kisebb */
+    width: 100%;
+    max-width: 100%;
 
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.2); /* jobb + alsó árnyék */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.14);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* kép bal oldalon */
+.allat-kartya:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* kép + név blokk */
+.allat-media {
+    width: 100%;
+    flex-shrink: 1;
+    text-align: center;
+    padding-right: 0;
+    border-right: none;
+}
+
 .allat-kartya img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
+    width: min(100%, 185px);
+    max-width: 185px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 6px;
+    border-radius: 14px;
+    clip-path: inset(0 round 14px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    display: block;
+    margin: 0 auto;
 }
 
-/* szöveg jobb oldalon */
-.allat-info {
+.allat-nev {
+    margin: 8px 0 0;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    color: #1b2a34;
+    font-weight: 700;
+}
+
+/* adatlista középen */
+.allat-adatok {
+    list-style: none;
+    margin: 0;
+    padding: 6px 10px;
+    min-width: 0;
+    line-height: 1.55;
+    align-self: stretch;
+    border-radius: 10px;
+    background: rgba(245, 252, 245, 0.9);
+}
+
+.allat-adatok li {
+    margin: 0;
+    padding: 2px 0;
+    color: #1f2f1f;
+}
+
+.allat-adatok li + li {
+    border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+.allat-adatok strong {
+    color: #1d6d1d;
+}
+
+/* leírás jobb oldalon */
+.allat-leiras {
     flex: 1;
+    align-self: stretch;
+    padding-left: 0;
+    border-left: none;
+}
+
+.allat-leiras p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    text-align: center;
+    color: #24343f;
 }
 
 .tart {
     width: 100%;
     padding: 0 20px; /* kis oldalsó margó */
+}
+
+#allatok .tart {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(260px, 320px));
+    gap: 14px;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+#allatok .allat-kartya {
+    margin: 0;
+}
+
+.allatok-zaro {
+    grid-column: 1 / -1;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.78);
+    border-radius: 12px;
+    padding: 12px;
+}
+
+@media (max-width: 900px) {
+    #allatok .tart {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .allat-media,
+    .allat-adatok,
+    .allat-leiras {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .allat-media,
+    .allat-leiras {
+        padding: 0;
+        border: none;
+    }
+
+    .allat-adatok {
+        margin-top: 0;
+        padding: 6px 0;
+        background: transparent;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 640px) {
+    #allatok .tart {
+        grid-template-columns: 1fr;
+    }
 }

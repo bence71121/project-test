@@ -38,10 +38,12 @@ body.index-body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
+    align-items: stretch;
 }
 
 .info-card {
     min-height: 220px;
+    height: 100%;
     background: rgba(255,255,255,0.95);
     border-radius: 24px;
     box-shadow: 0 18px 40px rgba(0,0,0,0.15);
@@ -54,8 +56,19 @@ body.index-body {
 .info-card.today-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0.75rem;
+}
+
+.cta-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.cta-card .card-button {
+    margin-top: auto;
+    margin-bottom: 0;
+    align-self: center;
 }
 
 .card-label {
@@ -82,6 +95,48 @@ body.index-body {
 
 .card-status {
     font-weight: 700;
+}
+
+.program-card {
+    text-align: left;
+}
+
+.program-day {
+    margin: 0;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.program-primary,
+.program-secondary {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.35;
+    color: black;
+}
+
+.program-secondary {
+    font-weight: 600;
+}
+
+.support-state {
+    font-size: 1.2rem;
+    line-height: 1.25;
+}
+
+.support-open {
+    color: #1f8b2c;
+}
+
+.support-closed {
+    color: #b02a2a;
+}
+
+.ticket-card-image {
+    width: 150px;
+    height: auto;
+    margin: 0.2rem auto 0.4rem;
+    display: block;
 }
 
 .card-button {
@@ -348,5 +403,91 @@ footer.footer-custom p:last-child {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
+}
+
+/* ===== KOSÁR IKON NAVBAR-BAN ===== */
+.cart-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: 0;
+    background-color: #2d8f2d;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.cart-popup {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 100;
+}
+
+.cart-popup.show {
+    display: block;
+}
+
+.cart-popup h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+#cartItems {
+    margin: 15px 0;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.cart-total {
+    padding: 15px 0;
+    border-top: 2px solid #ddd;
+    font-weight: bold;
+    text-align: right;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(81, 248, 81, 0.863);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.checkout-btn:hover {
+    background-color: rgba(60, 200, 60, 0.863);
 }
 

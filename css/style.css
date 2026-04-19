@@ -3,6 +3,24 @@ img{
     height: auto;
 }
 
+/* HOME OLDAL - JEGYKÁRTYA */
+.home-ticket-prices {
+    list-style: none;
+    padding: 0;
+    margin: 0.75rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: left;
+    font-size: 1rem;
+    color: black;
+}
+
+.home-ticket-prices li {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding-bottom: 0.3rem;
+}
+
 #rolunk{padding: 20px;}
 #rolunk p{text-align: justify;}
 
