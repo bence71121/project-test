@@ -248,7 +248,7 @@ function updateCart() {
     let html = '';
     
     if (cart.length === 0) {
-        cartItems.innerHTML = '<p style="text-align: center; color: #999;">A kosár üres</p>';
+        cartItems.innerHTML = '<p class="cart-empty">A kosár üres</p>';
         cartTotal.textContent = '0 Ft';
         return;
     }
@@ -266,9 +266,9 @@ function updateCart() {
     // HTML felépítése
     Object.keys(cartByDate).forEach(date => {
         const dateLabel = new Date(date).toLocaleDateString('hu-HU');
-        html += `<div style="margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;">`;
-        html += `<strong style="color: #333;">${dateLabel}</strong>`;
-        html += `<ul style="margin: 5px 0; padding-left: 20px; font-size: 0.9rem;">`;
+        html += `<div class="cart-group">`;
+        html += `<strong class="cart-group-date">${dateLabel}</strong>`;
+        html += `<ul class="cart-group-list">`;
         
         // Jegyek csoportosítása típus szerint
         const ticketsByType = {};
@@ -282,7 +282,7 @@ function updateCart() {
         // HTML jegyek listázása
         Object.values(ticketsByType).forEach(ticket => {
             const subtotal = ticket.price * ticket.count;
-            html += `<li>${ticket.count}x ${ticket.label} - ${subtotal.toLocaleString('hu-HU')} Ft</li>`;
+            html += `<li class="cart-group-item"><span>${ticket.count}x ${ticket.label}</span><strong>${subtotal.toLocaleString('hu-HU')} Ft</strong></li>`;
         });
         
         html += `</ul></div>`;

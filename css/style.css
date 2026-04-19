@@ -21,27 +21,71 @@ img{
     padding-bottom: 0.3rem;
 }
 
-#rolunk{padding: 20px;}
-#rolunk p{text-align: justify;}
+#rolunk {
+    padding: 24px;
+}
+
+#rolunk p {
+    text-align: justify;
+    line-height: 1.85;
+    font-size: 1.04rem;
+    color: #223322;
+}
+
+#dolgozok {
+    gap: 24px;
+}
 
 #dolgozok p {
     text-align: justify;
-    width: 65%;
+    width: 100%;
 }
 
 .text_right {
-    text-align: right !important;
-    width: 50%;
-    margin-left: 35%;
+    text-align: justify !important;
+    width: 100%;
+    margin-left: 0;
 }
 
 #dolgozok .col-md-4 p {
     text-align: center !important;
 }
 
-.dolgozo-card .dolgozo-text p {
-    width: 100%;
-    text-align: justify;
+.dolgozo-card {
+    background: linear-gradient(130deg, #95f295, #f6fff6);
+    padding: 24px;
+    margin: 24px 0;
+    border-radius: 24px;
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e7f7e7;
+    overflow: hidden;
+}
+
+.dolgozo-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 18px;
+}
+
+.dolgozo-card > .col-md-4 {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center !important;
+}
+
+.dolgozo-kep {
+    width: 100% !important;
+    max-width: 305px;
+    height: 365px;
+    object-fit: cover;
+    border-radius: 20px;
+    padding: 0;
+    display: block;
+    margin: 0 auto 12px !important;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+    border: 4px solid rgba(255, 255, 255, 0.7);
 }
 
 .dolgozo-card .nev,
@@ -51,57 +95,77 @@ img{
     margin: 0;
 }
 
-.dolgozo-card > .col-md-4 {
-    display: block !important;
-    text-align: center !important;
+.dolgozo-card .nev {
+    font-size: 1.32rem;
+    font-weight: 700;
+    color: #123812;
+    margin-bottom: 6px;
+    letter-spacing: 0.01em;
 }
 
-.dolgozo-card > .col-md-4 .dolgozo-kep {
-    width: 100% !important;
-    margin: 0 auto !important;
+.dolgozo-card .pozicio {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #2a5c2a;
+    opacity: 0.95;
 }
 
-.dolgozo-card > .col-md-4 .nev,
-.dolgozo-card > .col-md-4 .pozicio {
-    display: block !important;
-    width: 100% !important;
-    margin: 0.5rem auto 0 auto !important;
+.dolgozo-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 280px;
+    padding: 12px 8px;
+    border-radius: 20px;
+    background: transparent;
+    box-shadow: none;
+    overflow: hidden;
 }
 
-.dolgozo-card {
-            background-color: rgba(81, 248, 81, 0.692);
-            padding: 20px;
-            margin: 20px 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            border-radius: 15px;
-            box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.529);
-        }
-        .dolgozo-kep {
-            width: 100% !important;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 10px;
-            padding: 10px;
-            display: block;
-        }
-        .dolgozo-text {
-            display: flex;
-            flex-direction: column;
-            text-align: justify;
-        }
-        @media(min-width: 768px) {
-            .dolgozo-row {
-                display: flex;
-                align-items: center;
-            }
-            .dolgozo-row:nth-child(even) .dolgozo-kep {
-                order: 2;
-            }
-            .dolgozo-row:nth-child(even) .dolgozo-text {
-                order: 1;
-                padding-right: 20px;
-            }
-            .dolgozo-row:nth-child(odd) .dolgozo-text {
-                padding-left: 20px;
-            }
-        }
+.dolgozo-card .dolgozo-text p {
+    width: 100%;
+    margin: 0;
+    text-align: justify;
+    line-height: 1.92;
+    font-size: 1.03rem;
+    color: #1a381a;
+    max-width: none;
+    text-wrap: pretty;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 991px) {
+    .dolgozo-row {
+        flex-wrap: wrap;
+    }
+
+    .dolgozo-row > .col-md-4,
+    .dolgozo-row > .col-md-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .dolgozo-text {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .dolgozo-text::before,
+    .dolgozo-text::after {
+        display: none;
+    }
+}
+
+@media(min-width: 992px) {
+    .dolgozo-row > .col-md-4 {
+        flex: 0 0 32%;
+        max-width: 32%;
+    }
+
+    .dolgozo-row > .col-md-8 {
+        flex: 0 0 68%;
+        max-width: 68%;
+    }
+}
