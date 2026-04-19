@@ -1,3 +1,4 @@
+/* ===== KÖZÖS KÉP ALAPBEÁLLÍTÁS ===== */
 img{
     width:200px;
     height: auto;
@@ -25,6 +26,7 @@ img{
     padding: 24px;
 }
 
+/* ===== RÓLUNK SZEKCIÓ SZÖVEGEI ===== */
 #rolunk p {
     text-align: justify;
     line-height: 1.85;
@@ -51,6 +53,7 @@ img{
     text-align: center !important;
 }
 
+/* ===== DOLGOZÓI KÁRTYÁK ELRENDEZÉSE ===== */
 .dolgozo-card {
     background: linear-gradient(130deg, #95f295, #f6fff6);
     padding: 24px;
@@ -110,6 +113,7 @@ img{
     opacity: 0.95;
 }
 
+/* ===== DOLGOZÓI LEÍRÁS BLOKK ===== */
 .dolgozo-text {
     position: relative;
     display: flex;
@@ -136,6 +140,7 @@ img{
     z-index: 1;
 }
 
+/* ===== RESZPONZÍV: MOBIL/TABLET ===== */
 @media (max-width: 991px) {
     .dolgozo-row {
         flex-wrap: wrap;
@@ -158,6 +163,7 @@ img{
     }
 }
 
+/* ===== RESZPONZÍV: ASZTALI ===== */
 @media(min-width: 992px) {
     .dolgozo-row > .col-md-4 {
         flex: 0 0 32%;

@@ -1,3 +1,4 @@
+/* ===== INFORMÁCIÓ OLDAL: FŐ KONTÉNER ===== */
 .info-container {
     display: flex;
     flex-direction: column;
@@ -7,7 +8,7 @@
     padding: 20px;
 }
 
-/* felső és alsó szöveg */
+/* ===== INFORMÁCIÓ OLDAL: FELSŐ/ALSÓ SZÖVEGBLOKK ===== */
 .info-top, .info-bottom {
     max-width: 1250px;
     margin: 20px 0;
@@ -105,7 +106,7 @@
     padding: 20px;
 }
 
-/*Nyitva tartás*/
+/* ===== AKKORDION TARTALMAK: LISTÁK ===== */
 .opening-hours , .contact-info , .ticket-prices {
     list-style-type: none;
     padding: 0;
@@ -115,7 +116,7 @@
     line-height: 1.8;
 }
 
-/* Responsív */
+/* ===== RESZPONZÍV: AKKORDION SZÉLESSÉG ===== */
 @media (max-width: 1024px) {
     .accordion {
         max-width: 100%;
@@ -210,6 +211,7 @@
     }
 }
 
+/* ===== KOSÁR ELEMEK (INFORMÁCIÓ OLDAL) ===== */
 /* KOSÁR IKON NAVBAR-BAN */
 .cart-icon-wrapper {
     position: relative;
@@ -371,7 +373,7 @@
     white-space: nowrap;
 }
 
-/* JEGYVÁSÁRLÁS SZEKCIÓ */
+/* ===== JEGYVÁSÁRLÁS SZEKCIÓ ===== */
 .ticket-purchase-section {
     width: 100%;
     max-width: 1250px;
