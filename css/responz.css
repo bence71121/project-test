@@ -1,3 +1,4 @@
+/* ===== TELEFON NÉZET (0-599PX) ===== */
 @media (max-width: 599px) {
     html,
     body {
@@ -330,6 +331,7 @@
     }
 }
 
+/* ===== TABLET NÉZET (600-1279PX) ===== */
 @media (min-width: 600px) and (max-width: 1279px) {
     html,
     body {
@@ -503,6 +505,7 @@
     }
 }
 
+/* ===== ASZTALI NÉZET (1280PX+) ===== */
 @media (min-width: 1280px) {
     html,
     body {

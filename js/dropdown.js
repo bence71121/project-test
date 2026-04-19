@@ -1,3 +1,4 @@
+// ===== NAVIGÁCIÓ: legördülő menü =====
 const dropdownBtn = document.querySelector('.dropdown-btn');
 const dropdownMenu = document.querySelector('.dropdown-menu');
 
@@ -23,6 +24,7 @@ if (dropdownBtn && dropdownMenu) {
     });
 }
 
+// ===== KEZDŐOLDAL KÁRTYÁK: mai nyitvatartás =====
 function updateTodayCard() {
     const todayCard = document.querySelector('.today-card');
     if (!todayCard) return;
@@ -44,6 +46,7 @@ function updateTodayCard() {
 
 updateTodayCard();
 
+// ===== KEZDŐOLDAL KÁRTYÁK: napi programok =====
 function updateProgramCard() {
     const programCard = document.querySelector('.program-card');
     if (!programCard) return;
@@ -74,6 +77,7 @@ function updateProgramCard() {
 
 updateProgramCard();
 
+// ===== KEZDŐOLDAL KÁRTYÁK: ügyfélszolgálat állapot =====
 function updateSupportCard() {
     const supportCard = document.querySelector('.support-card');
     if (!supportCard) return;
@@ -102,7 +106,7 @@ function updateSupportCard() {
 
 updateSupportCard();
 
-// Akkordion funkcionalitás
+// ===== INFORMÁCIÓS OLDAL: akkordion vezérlés =====
 const accordionButtons = document.querySelectorAll('.accordion-btn');
 
 accordionButtons.forEach(button => {
@@ -124,7 +128,7 @@ accordionButtons.forEach(button => {
     });
 });
 
-// Az akkordion automatikus megnyitása hash alapján
+// ===== INFORMÁCIÓS OLDAL: hash alapú automatikus megnyitás =====
 window.addEventListener('load', function() {
     const hash = window.location.hash;
     if (hash) {
@@ -143,10 +147,10 @@ window.addEventListener('load', function() {
     }
 });
 
-// JEGYVÁSÁRLÁS ÉS KOSÁR FUNKCIONALITÁS
+// ===== JEGYVÁSÁRLÁS ÉS KOSÁR: állapot =====
 let cart = [];
 
-// Kosár ikon kezelése
+// ===== JEGYVÁSÁRLÁS ÉS KOSÁR: kosár nyitás/zárás =====
 const cartBtn = document.querySelector('.cart-btn');
 const cartPopup = document.querySelector('.cart-popup');
 
@@ -157,7 +161,7 @@ if (cartBtn) {
     });
 }
 
-// Naptár kezelése
+// ===== JEGYVÁSÁRLÁS ÉS KOSÁR: dátumválasztó =====
 const visitDateInput = document.getElementById('visitDate');
 const dayStatus = document.getElementById('dayStatus');
 
@@ -184,7 +188,7 @@ if (visitDateInput) {
     });
 }
 
-// Kosárba gomb kezelése
+// ===== JEGYVÁSÁRLÁS ÉS KOSÁR: kosárba gomb =====
 const addToCartBtn = document.querySelector('.add-to-cart-btn');
 if (addToCartBtn) {
     addToCartBtn.addEventListener('click', function() {
@@ -236,7 +240,7 @@ if (addToCartBtn) {
     });
 }
 
-// Kosár frissítése
+// ===== JEGYVÁSÁRLÁS ÉS KOSÁR: kosár renderelése =====
 function updateCart() {
     const cartCount = document.querySelector('.cart-count');
     const cartItems = document.getElementById('cartItems');
@@ -292,7 +296,7 @@ function updateCart() {
     cartTotal.textContent = total.toLocaleString('hu-HU') + ' Ft';
 }
 
-// Vásárlás befejezése
+// ===== JEGYVÁSÁRLÁS ÉS KOSÁR: fizetés befejezése =====
 const checkoutBtn = document.querySelector('.checkout-btn');
 if (checkoutBtn) {
     checkoutBtn.addEventListener('click', function() {

@@ -1,3 +1,4 @@
+/* ===== ÁLLATOK OLDAL: KÁRTYA ALAP ===== */
 .allat-kartya {
     display: flex;
     flex-direction: column;
@@ -97,6 +98,7 @@
     color: #24343f;
 }
 
+/* ===== ÁLLATOK OLDAL: RÁCS ELRENDEZÉS ===== */
 .tart {
     width: 100%;
     padding: 0 20px; /* kis oldalsó margó */
@@ -124,6 +126,7 @@
     padding: 12px;
 }
 
+/* ===== RESZPONZÍV: TABLET ===== */
 @media (max-width: 900px) {
     #allatok .tart {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -150,6 +153,7 @@
     }
 }
 
+/* ===== RESZPONZÍV: TELEFON ===== */
 @media (max-width: 640px) {
     #allatok .tart {
         grid-template-columns: 1fr;

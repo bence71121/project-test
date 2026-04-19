@@ -1,3 +1,4 @@
+/* ===== ALAPELRENDEZÉS ===== */
 body{ background-color: white;
       width: 100%;
       overflow-x: hidden;
@@ -186,6 +187,7 @@ body.index-body {
     flex: 1;
 }
 
+/* ===== NAVIGÁCIÓ (HEADER) ===== */
 /* NAVBAR */
 nav{
     width: 100%;
@@ -306,6 +308,7 @@ nav{
     background-color: #555;
 }
 
+/* ===== LÁBLÉC (FOOTER) ===== */
 /* FOOTER */
 footer.footer-custom {
     background-color: rgba(81, 248, 81, 0.863);
@@ -405,6 +408,7 @@ footer.footer-custom p:last-child {
     pointer-events: auto;
 }
 
+/* ===== KOSÁR (NAVBAR POPUP) ===== */
 /* ===== KOSÁR IKON NAVBAR-BAN ===== */
 .cart-icon-wrapper {
     position: relative;
